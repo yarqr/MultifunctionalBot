@@ -1,0 +1,2 @@
+BOT_TOKEN = "" #token Bot API
+PROVIDER_TOKEN = "" # payment provider token
