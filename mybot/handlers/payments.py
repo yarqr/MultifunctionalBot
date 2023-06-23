@@ -1,3 +1,5 @@
+import os
+
 from aiogram import F, Router
 from aiogram.filters import Command
 from aiogram.types import LabeledPrice, Message, PreCheckoutQuery
@@ -9,8 +11,9 @@ router = Router()
 
 @router.message(Command("pay"))
 async def command_pay(msg: Message):
+    token = os.getenv("PROVIDER_TOKEN") or settings.PROVIDER_TOKEN
     prices = [LabeledPrice(label="Product", amount=50000)]  # Price of the product in the smallest units of the currency
-    await msg.reply_invoice("Title", "Description", "test_payload", settings.PROVIDER_TOKEN, "RUB", prices)
+    await msg.reply_invoice("Title", "Description", "test_payload", token, "RUB", prices)
 
 
 @router.pre_checkout_query()

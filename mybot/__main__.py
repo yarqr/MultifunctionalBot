@@ -1,4 +1,5 @@
 import asyncio
+import os
 
 from aiogram import Bot, Dispatcher
 from loguru import logger
@@ -11,7 +12,7 @@ from mybot.services.commands import set_commands
 async def main():
     logger.success('Bot started')
 
-    bot = Bot(settings.BOT_TOKEN)
+    bot = Bot(os.getenv("BOT_TOKEN") or settings.BOT_TOKEN)
     dp = Dispatcher()
 
     await set_commands(bot)
