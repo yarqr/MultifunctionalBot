@@ -1,2 +1,4 @@
-BOT_TOKEN = "" #token Bot API
+BOT_TOKEN = "" # token Bot API
 PROVIDER_TOKEN = "" # payment provider token
+
+CHANNEL_ID = 0 # ID of the channel where subscription checking is required
