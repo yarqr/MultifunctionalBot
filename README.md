@@ -3,10 +3,6 @@ Multifunctional Bot
 
 The bot that demonstrates different features of the aiogram library
 
-### Deploy
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/0dX2zu?referralCode=8wEGXp)
-
 ### How to start
 
 1. Fill the `settings.toml` file
